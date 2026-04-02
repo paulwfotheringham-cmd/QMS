@@ -233,20 +233,44 @@
                 </div>
                 <p class="form-note">
                   By submitting, you agree this is a non-binding evaluation request. Production use requires a quality
-                  agreement and validation plan.
+                  agreement and validation plan. You will be taken to the dashboard preview (demo session in this browser
+                  only).
                 </p>
-                <p class="form-success" id="form-success" role="status">Thank you — your request has been noted for this demo.</p>
               </form>
             </div>
             <div class="signup-panel">
               <h2>Log in</h2>
               <p class="login-hint">
-                Pilot authentication is not enabled on this wireframe. In a full deployment, this would connect to your
-                identity provider and Part 11–ready sign-off flows.
+                Demo: enter your work email and any password. In production this would use your identity provider and
+                Part 11–ready sign-off flows.
               </p>
-              <div class="form-actions">
-                <button type="button" class="btn btn-outline" disabled aria-disabled="true">Log in (coming soon)</button>
-              </div>
+              <form id="login-form" novalidate>
+                <div class="form-group">
+                  <label for="login-email">Work email</label>
+                  <input
+                    id="login-email"
+                    name="login-email"
+                    type="email"
+                    autocomplete="username"
+                    required
+                    placeholder="you@company.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="login-password">Password</label>
+                  <input
+                    id="login-password"
+                    name="login-password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                    placeholder="Any value for demo"
+                  />
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+              </form>
               <p class="form-note form-note--spaced">
                 Reference framing similar to commercial ISO 13485 + Part 820 QMS product lines (e.g. module breadth and
                 compliance statements on vendor sites such as
@@ -291,20 +315,39 @@
       </div>
     </footer>
 
+    <script src="js/auth.js"></script>
     <script>
       (function () {
-        var form = document.getElementById("signup-form");
-        var success = document.getElementById("form-success");
-        if (!form) return;
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-          }
-          success.classList.add("visible");
-          form.reset();
-        });
+        var signup = document.getElementById("signup-form");
+        if (signup) {
+          signup.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!signup.checkValidity()) {
+              signup.reportValidity();
+              return;
+            }
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var org = document.getElementById("org").value.trim();
+            window.PriaQmsAuth.login({ name: name, email: email, org: org });
+            window.location.href = "dashboard.html";
+          });
+        }
+
+        var login = document.getElementById("login-form");
+        if (login) {
+          login.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!login.checkValidity()) {
+              login.reportValidity();
+              return;
+            }
+            var email = document.getElementById("login-email").value.trim();
+            var local = email.indexOf("@") > 0 ? email.slice(0, email.indexOf("@")) : email;
+            window.PriaQmsAuth.login({ email: email, name: local, org: "" });
+            window.location.href = "dashboard.html";
+          });
+        }
       })();
     </script>
   </body>

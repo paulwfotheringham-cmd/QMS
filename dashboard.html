@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PRIA QMS — Dashboard: quality system overview and module KPIs." />
+    <title>Dashboard | PRIA QMS</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://irp.cdn-website.com/cbe11ddf/dms3rep/multi/PRIA-Favicon-250.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-contact" role="note">
+        <span class="header-contact-label">PRIA QMS · Signed-in preview (wireframe data) · </span>
+        <a class="header-contact-link" href="tel:8609322060">860-932-2060</a>
+        <span class="header-contact-sep" aria-hidden="true"> · </span>
+        <a class="header-contact-link" href="mailto:info@priahealthcare.com">info@priahealthcare.com</a>
+      </div>
+      <div class="header-main">
+        <div class="header-inner">
+          <a class="header-brand" href="dashboard.html">
+            <img
+              class="header-logo"
+              src="https://irp.cdn-website.com/cbe11ddf/dms3rep/multi/pria-logo.png"
+              alt="PRIA Healthcare"
+              width="220"
+              height="70"
+            />
+            <span class="header-product-lockup">
+              <span class="header-product-name">QMS</span>
+              <span class="header-product-sub">Quality Management System</span>
+            </span>
+          </a>
+          <nav class="nav-main" aria-label="Primary">
+            <a href="dashboard.html" aria-current="page">Dashboard</a>
+            <a href="index.html#modules">Modules</a>
+            <a href="index.html#compliance">Compliance</a>
+            <a href="index.html">Marketing site</a>
+          </nav>
+          <div class="header-actions">
+            <button type="button" class="btn btn-outline btn--header" id="logout-btn">Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="dashboard-inner">
+        <header class="dashboard-intro">
+          <h1 id="dashboard-title">Quality dashboard</h1>
+          <p class="dashboard-meta" id="dashboard-welcome"></p>
+          <p class="dashboard-updated" id="dashboard-updated"></p>
+        </header>
+
+        <section class="kpi-summary" aria-label="Summary KPIs">
+          <div class="kpi-tile">
+            <span class="kpi-tile-label">Open CAPAs</span>
+            <span class="kpi-tile-value">7</span>
+            <span class="kpi-tile-hint">2 past due date</span>
+          </div>
+          <div class="kpi-tile">
+            <span class="kpi-tile-label">Training overdue</span>
+            <span class="kpi-tile-value">14</span>
+            <span class="kpi-tile-hint">Across 6 roles</span>
+          </div>
+          <div class="kpi-tile">
+            <span class="kpi-tile-label">Docs in review</span>
+            <span class="kpi-tile-value">11</span>
+            <span class="kpi-tile-hint">SOPs &amp; work instructions</span>
+          </div>
+          <div class="kpi-tile">
+            <span class="kpi-tile-label">Audits (90 days)</span>
+            <span class="kpi-tile-value">3</span>
+            <span class="kpi-tile-hint">1 finding open</span>
+          </div>
+        </section>
+
+        <h2 class="dashboard-section-title">Modules</h2>
+        <div class="dashboard-module-grid">
+          <article class="dash-card">
+            <h2>Document Library</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>412</strong> controlled</span>
+              <span>Last sync 2h ago</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Document Control</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>11</strong> in approval</span>
+              <span><strong>4</strong> effective this month</span>
+            </div>
+            <span class="dash-status dash-status--watch">Review</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Forms &amp; Records</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>1,204</strong> records YTD</span>
+              <span>98.2% closed on time</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Training</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>14</strong> overdue</span>
+              <span><strong>216</strong> completed (QTD)</span>
+            </div>
+            <span class="dash-status dash-status--watch">Attention</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Change Control</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>5</strong> open</span>
+              <span><strong>2</strong> pending QA</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Risk Management</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>38</strong> line items</span>
+              <span>RPN review due: 2</span>
+            </div>
+            <span class="dash-status dash-status--watch">Review</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Complaints</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>6</strong> open</span>
+              <span>MDR workflow: 1</span>
+            </div>
+            <span class="dash-status dash-status--action">Action</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>CAPAs</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>7</strong> open</span>
+              <span><strong>2</strong> past due</span>
+            </div>
+            <span class="dash-status dash-status--action">Action</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Internal Audit</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>3</strong> scheduled</span>
+              <span><strong>1</strong> finding open</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Nonconforming Product</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>4</strong> NCRs open</span>
+              <span>Disposition pending: 1</span>
+            </div>
+            <span class="dash-status dash-status--watch">Review</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Management Review</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi">Next: <strong>May 14</strong></span>
+              <span><strong>6</strong> inputs outstanding</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Supplier Control</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>52</strong> approved</span>
+              <span>Re-eval due: 3</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Preventive Maintenance</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>28</strong> assets</span>
+              <span>PM overdue: 2</span>
+            </div>
+            <span class="dash-status dash-status--watch">Attention</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Measuring Equipment</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>91</strong> in service</span>
+              <span>Calibration due ≤30d: 7</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+          <article class="dash-card">
+            <h2>Products</h2>
+            <div class="dash-card-kpis">
+              <span class="dash-kpi"><strong>12</strong> SKU / families</span>
+              <span>DHF updates: 1</span>
+            </div>
+            <span class="dash-status dash-status--ok">On track</span>
+            <a class="dash-card-link" href="#">Open module →</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">PRIA QMS (concept) · Dashboard</p>
+        <p class="footer-copy">Wireframe metrics are illustrative only.</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+      (function () {
+        if (!window.PriaQmsAuth.requireAuth()) return;
+
+        var session = window.PriaQmsAuth.getSession();
+        var name = session.name || (session.email ? session.email.split("@")[0] : "User");
+        var org = session.org ? session.org : null;
+
+        var welcome = document.getElementById("dashboard-welcome");
+        welcome.textContent =
+          "Signed in as " + name + (org ? " · " + org : "");
+
+        var updated = document.getElementById("dashboard-updated");
+        updated.textContent =
+          "Snapshot as of " +
+          new Date().toLocaleString(undefined, {
+            dateStyle: "medium",
+            timeStyle: "short",
+          }) +
+          " (demo)" ;
+
+        document.getElementById("logout-btn").addEventListener("click", function () {
+          window.PriaQmsAuth.logout();
+        });
+      })();
+    </script>
+  </body>
+</html>
