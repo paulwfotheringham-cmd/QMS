@@ -48,11 +48,11 @@
             <a href="#modules">Modules</a>
             <a href="#compliance">Compliance</a>
             <a href="#features">Capabilities</a>
-            <a href="#access">Request access</a>
+            <a href="login/">Request access</a>
           </nav>
           <div class="header-actions">
-            <a class="btn btn-outline btn--header" href="#access">Log in</a>
-            <a class="btn btn-primary btn--header" href="#access">Sign up</a>
+            <a class="btn btn-outline btn--header" href="login/">Log in</a>
+            <a class="btn btn-primary btn--header" href="login/">Sign up</a>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
             fifteen integrated modules from document control to complaints and CAPA.
           </p>
           <div class="hero-ctas">
-            <a class="btn btn-primary btn-large" href="#access">Request pilot access</a>
+            <a class="btn btn-primary btn-large" href="login/">Request pilot access</a>
             <a class="btn btn-outline btn-large" href="#modules">Explore modules</a>
           </div>
           <p class="hero-secondary">
@@ -197,89 +197,15 @@
         </div>
       </section>
 
-      <section id="access" class="band signup-section">
-        <div class="band-inner">
-          <h2 class="section-title">Request access</h2>
+      <section id="access" class="band signup-section" aria-labelledby="access-cta-title">
+        <div class="band-inner access-cta-inner">
+          <h2 id="access-cta-title" class="section-title">Request access</h2>
           <p class="section-sub">
-            Leave your details to receive pilot credentials or a walkthrough. This form is a demo — no data is stored on
-            a server in this wireframe.
+            Sign up or log in on a dedicated page — then open the dashboard preview (demo session in this browser only).
           </p>
-          <div class="signup-grid">
-            <div class="signup-panel">
-              <h2>Sign up</h2>
-              <p>We’ll follow up with next steps for PRIA stakeholders.</p>
-              <form id="signup-form" novalidate>
-                <div class="form-group">
-                  <label for="name">Full name</label>
-                  <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe" />
-                </div>
-                <div class="form-group">
-                  <label for="email">Work email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    required
-                    placeholder="you@company.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="org">Organization</label>
-                  <input id="org" name="org" type="text" autocomplete="organization" placeholder="PRIA Healthcare" />
-                </div>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-primary">Submit request</button>
-                </div>
-                <p class="form-note">
-                  By submitting, you agree this is a non-binding evaluation request. Production use requires a quality
-                  agreement and validation plan. You will be taken to the dashboard preview (demo session in this browser
-                  only).
-                </p>
-              </form>
-            </div>
-            <div class="signup-panel">
-              <h2>Log in</h2>
-              <p class="login-hint">
-                Demo: enter your work email and any password. In production this would use your identity provider and
-                Part 11–ready sign-off flows.
-              </p>
-              <form id="login-form" novalidate>
-                <div class="form-group">
-                  <label for="login-email">Work email</label>
-                  <input
-                    id="login-email"
-                    name="login-email"
-                    type="email"
-                    autocomplete="username"
-                    required
-                    placeholder="you@company.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="login-password">Password</label>
-                  <input
-                    id="login-password"
-                    name="login-password"
-                    type="password"
-                    autocomplete="current-password"
-                    required
-                    placeholder="Any value for demo"
-                  />
-                </div>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-primary">Log in</button>
-                </div>
-              </form>
-              <p class="form-note form-note--spaced">
-                Reference framing similar to commercial ISO 13485 + Part 820 QMS product lines (e.g. module breadth and
-                compliance statements on vendor sites such as
-                <a href="https://www.imsxp.com/10Products/QmsSoftware13.aspx" rel="noopener noreferrer"
-                  >IMSXpress MedTech QMS</a
-                >).
-              </p>
-            </div>
-          </div>
+          <p class="access-cta-actions">
+            <a class="btn btn-primary btn-large" href="login/">Sign up or log in</a>
+          </p>
         </div>
       </section>
     </main>
@@ -315,40 +241,5 @@
       </div>
     </footer>
 
-    <script src="js/auth.js"></script>
-    <script>
-      (function () {
-        var signup = document.getElementById("signup-form");
-        if (signup) {
-          signup.addEventListener("submit", function (e) {
-            e.preventDefault();
-            if (!signup.checkValidity()) {
-              signup.reportValidity();
-              return;
-            }
-            var name = document.getElementById("name").value.trim();
-            var email = document.getElementById("email").value.trim();
-            var org = document.getElementById("org").value.trim();
-            window.PriaQmsAuth.login({ name: name, email: email, org: org });
-            window.location.href = "dashboard/";
-          });
-        }
-
-        var login = document.getElementById("login-form");
-        if (login) {
-          login.addEventListener("submit", function (e) {
-            e.preventDefault();
-            if (!login.checkValidity()) {
-              login.reportValidity();
-              return;
-            }
-            var email = document.getElementById("login-email").value.trim();
-            var local = email.indexOf("@") > 0 ? email.slice(0, email.indexOf("@")) : email;
-            window.PriaQmsAuth.login({ email: email, name: local, org: "" });
-            window.location.href = "dashboard/";
-          });
-        }
-      })();
-    </script>
   </body>
 </html>

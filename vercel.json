@@ -4,6 +4,11 @@
       "source": "/dashboard.html",
       "destination": "/dashboard/",
       "permanent": false
+    },
+    {
+      "source": "/access",
+      "destination": "/login/",
+      "permanent": false
     }
   ]
 }

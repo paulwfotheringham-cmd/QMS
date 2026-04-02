@@ -807,3 +807,45 @@ button.btn {
 .header-actions .btn[type="button"] {
   cursor: pointer;
 }
+
+/* Dedicated login page (/login/) */
+.login-main {
+  background: var(--off-white);
+  padding: 2rem 1.5rem 3rem;
+  min-height: 55vh;
+}
+
+.login-main-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.login-page-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--pria-navy);
+  margin: 0 0 0.5rem;
+}
+
+.login-page-lead {
+  margin-bottom: 2rem !important;
+}
+
+.login-back {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9375rem;
+}
+
+.login-back a {
+  font-weight: 600;
+}
+
+.access-cta-inner {
+  text-align: center;
+}
+
+.access-cta-actions {
+  margin: 0;
+}

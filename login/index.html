@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PRIA QMS — Sign up or log in to access the quality management dashboard preview."
+    />
+    <title>Sign in | PRIA QMS</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://irp.cdn-website.com/cbe11ddf/dms3rep/multi/PRIA-Favicon-250.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="login-page">
+    <header class="site-header">
+      <div class="header-contact" role="note">
+        <span class="header-contact-label">Prepared for PRIA Healthcare — QMS concept · </span>
+        <a class="header-contact-link" href="tel:8609322060">860-932-2060</a>
+        <span class="header-contact-sep" aria-hidden="true"> · </span>
+        <a class="header-contact-link" href="mailto:info@priahealthcare.com">info@priahealthcare.com</a>
+      </div>
+      <div class="header-main">
+        <div class="header-inner">
+          <a class="header-brand" href="../index.html">
+            <img
+              class="header-logo"
+              src="https://irp.cdn-website.com/cbe11ddf/dms3rep/multi/pria-logo.png"
+              alt="PRIA Healthcare"
+              width="220"
+              height="70"
+            />
+            <span class="header-product-lockup">
+              <span class="header-product-name">QMS</span>
+              <span class="header-product-sub">Quality Management System</span>
+            </span>
+          </a>
+          <nav class="nav-main" aria-label="Primary">
+            <a href="../index.html#modules">Modules</a>
+            <a href="../index.html#compliance">Compliance</a>
+            <a href="../index.html#features">Capabilities</a>
+            <a href="./" aria-current="page">Sign in</a>
+          </nav>
+          <div class="header-actions">
+            <a class="btn btn-outline btn--header" href="./">Log in</a>
+            <a class="btn btn-primary btn--header" href="./">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="login-main">
+      <div class="band-inner login-main-inner">
+        <h1 class="login-page-title">Request access</h1>
+        <p class="section-sub login-page-lead">
+          Demo: no server-side accounts — a browser session only. After sign-up or log-in you’ll go to the dashboard
+          preview.
+        </p>
+        <div class="signup-grid">
+          <div class="signup-panel">
+            <h2>Sign up</h2>
+            <p>We’ll follow up with next steps for PRIA stakeholders.</p>
+            <form id="signup-form" novalidate>
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe" />
+              </div>
+              <div class="form-group">
+                <label for="email">Work email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="you@company.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="org">Organization</label>
+                <input id="org" name="org" type="text" autocomplete="organization" placeholder="PRIA Healthcare" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit request</button>
+              </div>
+              <p class="form-note">
+                By submitting, you agree this is a non-binding evaluation request. Production use requires a quality
+                agreement and validation plan.
+              </p>
+            </form>
+          </div>
+          <div class="signup-panel">
+            <h2>Log in</h2>
+            <p class="login-hint">
+              Demo: enter your work email and any password. In production this would use your identity provider and
+              Part 11–ready sign-off flows.
+            </p>
+            <form id="login-form" novalidate>
+              <div class="form-group">
+                <label for="login-email">Work email</label>
+                <input
+                  id="login-email"
+                  name="login-email"
+                  type="email"
+                  autocomplete="username"
+                  required
+                  placeholder="you@company.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input
+                  id="login-password"
+                  name="login-password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  placeholder="Any value for demo"
+                />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Log in</button>
+              </div>
+            </form>
+            <p class="form-note form-note--spaced">
+              Reference framing similar to commercial ISO 13485 + Part 820 QMS product lines (e.g.
+              <a href="https://www.imsxp.com/10Products/QmsSoftware13.aspx" rel="noopener noreferrer"
+                >IMSXpress MedTech QMS</a
+              >).
+            </p>
+          </div>
+        </div>
+        <p class="login-back">
+          <a href="../index.html">← Back to marketing site</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">PRIA QMS (concept) · Sign in</p>
+        <p class="footer-copy">
+          <a href="../index.html">Home</a>
+          ·
+          <a href="https://www.priahealthcare.com/privacy-policy" rel="noopener noreferrer">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script>
+      (function () {
+        var signup = document.getElementById("signup-form");
+        if (signup) {
+          signup.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!signup.checkValidity()) {
+              signup.reportValidity();
+              return;
+            }
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var org = document.getElementById("org").value.trim();
+            window.PriaQmsAuth.login({ name: name, email: email, org: org });
+            window.location.href = "../dashboard/";
+          });
+        }
+
+        var login = document.getElementById("login-form");
+        if (login) {
+          login.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!login.checkValidity()) {
+              login.reportValidity();
+              return;
+            }
+            var email = document.getElementById("login-email").value.trim();
+            var local = email.indexOf("@") > 0 ? email.slice(0, email.indexOf("@")) : email;
+            window.PriaQmsAuth.login({ email: email, name: local, org: "" });
+            window.location.href = "../dashboard/";
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

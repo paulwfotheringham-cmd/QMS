@@ -27,7 +27,15 @@
 
   function homeUrl() {
     var p = global.location.pathname || "";
-    return p.indexOf("dashboard") !== -1 ? "../index.html" : "index.html";
+    if (p.indexOf("dashboard") !== -1 || p.indexOf("login") !== -1) return "../index.html";
+    return "index.html";
+  }
+
+  function loginPageUrl() {
+    var p = global.location.pathname || "";
+    if (p.indexOf("dashboard") !== -1) return "../login/";
+    if (p.indexOf("login") !== -1) return "./";
+    return "login/";
   }
 
   function logout() {
@@ -37,7 +45,7 @@
 
   function requireAuth() {
     if (!getSession()) {
-      global.location.replace(homeUrl() + "#access");
+      global.location.replace(loginPageUrl());
       return false;
     }
     return true;
@@ -48,5 +56,6 @@
     login: login,
     logout: logout,
     requireAuth: requireAuth,
+    loginPageUrl: loginPageUrl,
   };
 })(window);
