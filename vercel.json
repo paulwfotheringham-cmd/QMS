@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/dashboard.html",
+      "destination": "/dashboard/",
+      "permanent": false
+    }
+  ]
+}

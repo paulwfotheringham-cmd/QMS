@@ -330,7 +330,7 @@
             var email = document.getElementById("email").value.trim();
             var org = document.getElementById("org").value.trim();
             window.PriaQmsAuth.login({ name: name, email: email, org: org });
-            window.location.href = "dashboard.html";
+            window.location.href = "dashboard/";
           });
         }
 
@@ -345,7 +345,7 @@
             var email = document.getElementById("login-email").value.trim();
             var local = email.indexOf("@") > 0 ? email.slice(0, email.indexOf("@")) : email;
             window.PriaQmsAuth.login({ email: email, name: local, org: "" });
-            window.location.href = "dashboard.html";
+            window.location.href = "dashboard/";
           });
         }
       })();

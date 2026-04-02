@@ -25,14 +25,19 @@
     );
   }
 
+  function homeUrl() {
+    var p = global.location.pathname || "";
+    return p.indexOf("dashboard") !== -1 ? "../index.html" : "index.html";
+  }
+
   function logout() {
     sessionStorage.removeItem(KEY);
-    global.location.href = "index.html";
+    global.location.href = homeUrl();
   }
 
   function requireAuth() {
     if (!getSession()) {
-      global.location.replace("index.html#access");
+      global.location.replace(homeUrl() + "#access");
       return false;
     }
     return true;
