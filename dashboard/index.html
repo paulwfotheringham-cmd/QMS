@@ -21,7 +21,7 @@
   <body>
     <header class="site-header">
       <div class="header-contact" role="note">
-        <span class="header-contact-label">PRIA QMS · Signed-in preview (wireframe data) · </span>
+        <span class="header-contact-label">PRIA QMS · Dashboard preview (wireframe data) · </span>
         <a class="header-contact-link" href="tel:8609322060">860-932-2060</a>
         <span class="header-contact-sep" aria-hidden="true"> · </span>
         <a class="header-contact-link" href="mailto:info@priahealthcare.com">info@priahealthcare.com</a>
@@ -49,7 +49,8 @@
             <a href="../index.html">Marketing site</a>
           </nav>
           <div class="header-actions">
-            <button type="button" class="btn btn-outline btn--header" id="logout-btn">Log out</button>
+            <a class="btn btn-outline btn--header" href="../login/" id="header-signin">Sign in</a>
+            <button type="button" class="btn btn-primary btn--header" id="logout-btn" hidden>Log out</button>
           </div>
         </div>
       </div>
@@ -87,9 +88,13 @@
         </section>
 
         <h2 class="dashboard-section-title">Modules</h2>
+        <p class="section-sub dashboard-modules-lead">
+          The same fifteen modules as the marketing site — here with illustrative KPIs for the dashboard preview.
+        </p>
         <div class="dashboard-module-grid">
           <article class="dash-card">
-            <h2>Document Library</h2>
+            <h3 class="dash-card-title">Document Library</h3>
+            <p class="dash-card-desc">Central repository, search, and controlled viewing of approved content.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>412</strong> controlled</span>
               <span>Last sync 2h ago</span>
@@ -98,7 +103,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Document Control</h2>
+            <h3 class="dash-card-title">Document Control</h3>
+            <p class="dash-card-desc">Revisions, approvals, effective dates, and obsolescence.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>11</strong> in approval</span>
               <span><strong>4</strong> effective this month</span>
@@ -107,7 +113,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Forms &amp; Records</h2>
+            <h3 class="dash-card-title">Forms &amp; Records</h3>
+            <p class="dash-card-desc">Structured data capture with status, routing, and retention.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>1,204</strong> records YTD</span>
               <span>98.2% closed on time</span>
@@ -116,7 +123,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Training</h2>
+            <h3 class="dash-card-title">Training</h3>
+            <p class="dash-card-desc">Role-based assignments, completion evidence, and overdue visibility.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>14</strong> overdue</span>
               <span><strong>216</strong> completed (QTD)</span>
@@ -125,7 +133,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Change Control</h2>
+            <h3 class="dash-card-title">Change Control</h3>
+            <p class="dash-card-desc">Planned changes, impact assessment, and implementation tracking.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>5</strong> open</span>
               <span><strong>2</strong> pending QA</span>
@@ -134,7 +143,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Risk Management</h2>
+            <h3 class="dash-card-title">Risk Management</h3>
+            <p class="dash-card-desc">Risk register, links to design and post-market inputs (e.g. ISO 14971 workflow).</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>38</strong> line items</span>
               <span>RPN review due: 2</span>
@@ -143,7 +153,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Complaints</h2>
+            <h3 class="dash-card-title">Complaints</h3>
+            <p class="dash-card-desc">Intake, evaluation, regulatory reporting considerations, and closure.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>6</strong> open</span>
               <span>MDR workflow: 1</span>
@@ -152,7 +163,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>CAPAs</h2>
+            <h3 class="dash-card-title">CAPAs</h3>
+            <p class="dash-card-desc">Root cause, actions, effectiveness checks, and linkage to complaints and changes.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>7</strong> open</span>
               <span><strong>2</strong> past due</span>
@@ -161,7 +173,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Internal Audit</h2>
+            <h3 class="dash-card-title">Internal Audit</h3>
+            <p class="dash-card-desc">Schedule, findings, and follow-up to management and CAPA.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>3</strong> scheduled</span>
               <span><strong>1</strong> finding open</span>
@@ -170,7 +183,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Nonconforming Product</h2>
+            <h3 class="dash-card-title">Nonconforming Product</h3>
+            <p class="dash-card-desc">NCRs, disposition, and segregation/traceability hooks.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>4</strong> NCRs open</span>
               <span>Disposition pending: 1</span>
@@ -179,7 +193,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Management Review</h2>
+            <h3 class="dash-card-title">Management Review</h3>
+            <p class="dash-card-desc">Inputs, minutes, and quality system action items.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi">Next: <strong>May 14</strong></span>
               <span><strong>6</strong> inputs outstanding</span>
@@ -188,7 +203,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Supplier Control</h2>
+            <h3 class="dash-card-title">Supplier Control</h3>
+            <p class="dash-card-desc">Approved supplier list, evaluations, and purchasing constraints.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>52</strong> approved</span>
               <span>Re-eval due: 3</span>
@@ -197,7 +213,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Preventive Maintenance</h2>
+            <h3 class="dash-card-title">Preventive Maintenance</h3>
+            <p class="dash-card-desc">Equipment schedules, work orders, and downtime visibility.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>28</strong> assets</span>
               <span>PM overdue: 2</span>
@@ -206,7 +223,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Measuring Equipment</h2>
+            <h3 class="dash-card-title">Measuring Equipment</h3>
+            <p class="dash-card-desc">Calibration due dates, standards, and out-of-tolerance handling.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>91</strong> in service</span>
               <span>Calibration due ≤30d: 7</span>
@@ -215,7 +233,8 @@
             <a class="dash-card-link" href="#">Open module →</a>
           </article>
           <article class="dash-card">
-            <h2>Products</h2>
+            <h3 class="dash-card-title">Products</h3>
+            <p class="dash-card-desc">Device/product records, specifications, and DHF/DMR index alignment.</p>
             <div class="dash-card-kpis">
               <span class="dash-kpi"><strong>12</strong> SKU / families</span>
               <span>DHF updates: 1</span>
@@ -237,28 +256,38 @@
     <script src="../js/auth.js"></script>
     <script>
       (function () {
-        if (!window.PriaQmsAuth.requireAuth()) return;
-
         var session = window.PriaQmsAuth.getSession();
-        var name = session.name || (session.email ? session.email.split("@")[0] : "User");
-        var org = session.org ? session.org : null;
-
         var welcome = document.getElementById("dashboard-welcome");
-        welcome.textContent =
-          "Signed in as " + name + (org ? " · " + org : "");
-
         var updated = document.getElementById("dashboard-updated");
+        var signin = document.getElementById("header-signin");
+        var logoutBtn = document.getElementById("logout-btn");
+
+        if (session) {
+          var name = session.name || (session.email ? session.email.split("@")[0] : "User");
+          var org = session.org ? session.org : null;
+          welcome.textContent = "Signed in as " + name + (org ? " · " + org : "");
+          if (signin) signin.setAttribute("hidden", "");
+          if (logoutBtn) logoutBtn.removeAttribute("hidden");
+        } else {
+          welcome.textContent =
+            "Preview mode — same fifteen modules as the home page. Sign in to personalize this view.";
+          if (signin) signin.removeAttribute("hidden");
+          if (logoutBtn) logoutBtn.setAttribute("hidden", "");
+        }
+
         updated.textContent =
           "Snapshot as of " +
           new Date().toLocaleString(undefined, {
             dateStyle: "medium",
             timeStyle: "short",
           }) +
-          " (demo)" ;
+          " (wireframe data)";
 
-        document.getElementById("logout-btn").addEventListener("click", function () {
-          window.PriaQmsAuth.logout();
-        });
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", function () {
+            window.PriaQmsAuth.logout();
+          });
+        }
       })();
     </script>
   </body>

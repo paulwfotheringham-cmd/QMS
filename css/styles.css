@@ -741,12 +741,24 @@ img {
   box-shadow: 0 8px 28px rgba(16, 81, 130, 0.1);
 }
 
-.dash-card h2 {
+.dash-card-title {
   font-size: 1rem;
   font-weight: 700;
   color: var(--pria-navy);
   margin: 0;
   line-height: 1.3;
+}
+
+.dash-card-desc {
+  font-size: 0.8125rem;
+  color: var(--pria-text);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.dashboard-modules-lead {
+  margin-top: -1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .dash-card-kpis {
